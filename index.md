@@ -46,6 +46,10 @@ Support for Wheelie: **support@wheelie.day** — we answer.
 Lockline Studio Ltd is a private limited company registered in England and
 Wales.
 
-- **Company number:** <!-- FILL: Companies House number -->
-- **Registered office:** <!-- FILL: registered address -->
+- **Company number:** 13743922
+- **Registered office:** 124 City Road, London, EC1V 2NX, United Kingdom
+- **Incorporated:** 15 November 2021
 - **Contact:** hello@locklinestudio.com
+
+Our Companies House record is public:
+[Lockline Studio Ltd, company 13743922](https://find-and-update.company-information.service.gov.uk/company/13743922).
