@@ -8,14 +8,16 @@ device, and don't ask you to make an account to use them.
 
 ### Wheelie — UK bin collection reminders
 
-Wheelie tells you which bins to put out and when, for **133 UK councils** and
-counting — roughly 40% of the country by population. Enter a postcode, pick
-your address, and get a reminder the night before, a home-screen widget and
-Siri support.
+Wheelie tells you which bins to put out and when, for **304 UK councils** and
+counting — more than 86% of the country by population. Enter a postcode, pick
+your address, and get a reminder the night before and a home-screen widget.
+Not covered yet? Set your own collection days up by hand in under a minute and
+get exactly the same reminders.
 
 Collection dates are read live from your own council, so bank-holiday changes
-are already included. There are no accounts, no tracking and no servers of
-ours in the middle: your address and your reminders stay on your phone.
+are already included. There are no accounts, no tracking and no ads: your
+address goes to your council's own service to look up your dates, and never
+to us.
 
 [wheelie.day](https://wheelie.day) · [Privacy policy](https://wheelie.day/privacy)
 
@@ -29,7 +31,8 @@ and not real dates, we say so plainly instead of calculating dates that would
 drift out of step with bank holidays.
 
 **Your data stays yours.** No account, no login, no analytics that identify
-you. What the app knows about your home never leaves your phone.
+you. Your address goes only to your own council, to answer your own question,
+and there is no profile of you anywhere.
 
 **We say what we can't do.** Some councils publish nothing an app can read.
 For those we tell you honestly rather than showing an empty screen or a
