@@ -15,30 +15,23 @@ permalink: /radar/update/
 <p><strong>Your WiFi details and settings are kept.</strong> This replaces only
 the program, not your setup, so there is nothing to enter again afterwards.</p>
 
-<h2>What you need</h2>
-
-<ul>
-  <li><strong>Google Chrome or Microsoft Edge, on a computer.</strong> This
-      cannot work in Safari or Firefox, or on a phone or tablet — those
-      browsers are not allowed to talk to USB devices.</li>
-  <li><strong>A USB-C cable that carries data.</strong> Many charging cables
-      only carry power. If your radar does not appear in the list later, this
-      is almost always why — try the cable that came with a phone or an
-      external drive.</li>
-</ul>
+<p>You will need <strong>Google Chrome or Microsoft Edge, on a computer</strong>.
+This cannot work in Safari or Firefox, or on a phone or tablet.</p>
 
 <h2>Steps</h2>
 
 <ol>
-  <li>Plug the radar into your computer with the USB-C cable. Leave it
-      switched on — it is fine if it is restarting.</li>
+  <li>Plug the radar into your computer or laptop with the USB-C cable. Leave
+      the radar switched on — it is fine if it is restarting.</li>
+  <li>The first time you plug it in, your computer may ask about a new
+      accessory — click <strong>Allow</strong> to let it connect.</li>
   <li>Press <strong>Update my radar</strong> below.</li>
   <li>A small window appears listing devices. Choose the one that appears when
       you plug the radar in, then press <em>Connect</em>. On Windows it is
       often called <em>USB Serial Device</em>; on a Mac, <em>usbmodem</em>
       followed by some numbers.</li>
   <li>Wait about two minutes without unplugging anything. The radar restarts on
-      its own when it has finished.</li>
+      its own when it has finished, and the update is done.</li>
 </ol>
 
 <p style="margin:2em 0">
@@ -62,38 +55,3 @@ the program, not your setup, so there is nothing to enter again afterwards.</p>
 
 <script type="module"
         src="https://unpkg.com/esp-web-tools@10.0.0/dist/web/install-button.js"></script>
-
-<h2>If it does not work</h2>
-
-<p>
-  <strong>The radar is not in the list.</strong> Nine times out of ten the
-  cable is charge-only. Try a different one before anything else. Failing that,
-  try the other USB port, and unplug any hub.
-</p>
-
-<p>
-  <strong>It stops partway through.</strong> Nothing is broken — the radar
-  keeps the program it already had. Unplug it, plug it back in and start again.
-</p>
-
-<p>
-  <strong>Still stuck.</strong> Email
-  <a href="mailto:support@locklinestudio.com">support@locklinestudio.com</a>
-  and say what the screen shows. A real person answers.
-</p>
-
-<h2>What this actually does</h2>
-
-<p>
-  It writes the current released firmware into the radar and points it at that
-  copy on the next start. It does not erase the area holding your WiFi
-  credentials, your location or your preferences.
-</p>
-
-<p>
-  The firmware it installs is the same public build the radar downloads for
-  itself, published at
-  <a href="https://github.com/raoulasaurous/esp32-plane-radar-releases/releases/latest">our
-  releases page</a>. Nothing is uploaded from your computer to us, and the
-  transfer happens entirely between your browser and the radar in front of you.
-</p>
