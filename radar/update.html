@@ -34,7 +34,24 @@ This cannot work in Safari or Firefox, or on a phone or tablet.</p>
       its own when it has finished, and the update is done.</li>
 </ol>
 
-<p style="margin:2em 0">
+<h2>Unlock</h2>
+
+<p>Enter the code from your support email, then the update button appears.</p>
+
+<p style="margin:1em 0 2em">
+  <input id="unlock-code" type="text" autocomplete="off"
+         placeholder="Code" aria-label="Unlock code"
+         style="font-size:1.05em;padding:0.55em 0.8em;border:1px solid #bbb;
+                border-radius:8px;width:11em;max-width:60%">
+  <button id="unlock-btn"
+          style="font-size:1.05em;padding:0.55em 1.1em;border-radius:8px;
+                 border:0;background:#444;color:#fff;cursor:pointer">
+    Unlock
+  </button>
+  <span id="unlock-msg" style="margin-left:0.6em"></span>
+</p>
+
+<p id="flash-area" style="margin:2em 0;display:none">
   <esp-web-install-button
       manifest="https://raw.githubusercontent.com/raoulasaurous/esp32-plane-radar-releases/main/web/manifest.json">
     <button slot="activate"
@@ -55,3 +72,39 @@ This cannot work in Safari or Firefox, or on a phone or tablet.</p>
 
 <script type="module"
         src="https://unpkg.com/esp-web-tools@10.0.0/dist/web/install-button.js"></script>
+
+<script>
+// Unlock gate. The page stores only a SHA-256 fingerprint, so the code is not
+// readable here. Entered codes are trimmed and lowercased first — people type
+// "Wheelsup " from an email and it must still work.
+(function () {
+  var HASH = "d789c4ce20fbc4530965cb614bb9ee872ae9b8bd77a74fb9b4322c8fd974c96c";
+  var input = document.getElementById("unlock-code");
+  var btn = document.getElementById("unlock-btn");
+  var msg = document.getElementById("unlock-msg");
+  var area = document.getElementById("flash-area");
+
+  function unlock() {
+    var code = (input.value || "").trim().toLowerCase();
+    if (!code) return;
+    crypto.subtle.digest("SHA-256", new TextEncoder().encode(code))
+      .then(function (buf) {
+        var hex = Array.from(new Uint8Array(buf))
+          .map(function (b) { return b.toString(16).padStart(2, "0"); })
+          .join("");
+        if (hex === HASH) {
+          area.style.display = "block";
+          input.disabled = true;
+          btn.disabled = true;
+          msg.textContent = "Unlocked - the button is below.";
+        } else {
+          msg.textContent = "That code is not right - check the email.";
+        }
+      });
+  }
+  btn.addEventListener("click", unlock);
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") unlock();
+  });
+})();
+</script>
